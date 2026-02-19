@@ -1,15 +1,18 @@
 .date-filter-container {
   background: white;
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5e5;
   margin-bottom: 24px;
 }
 
 .date-filter-container h3 {
   margin: 0 0 16px 0;
-  color: #333;
-  font-size: 20px;
+  color: #171717;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .quick-filters {
@@ -21,37 +24,40 @@
 
 .quick-filter-button {
   padding: 8px 16px;
-  border: 2px solid #e0e0e0;
-  border-radius: 20px;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
   background: white;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s;
-  color: #666;
+  transition: all 0.15s;
+  color: #525252;
 }
 
 .quick-filter-button:hover {
-  border-color: #4BC0C0;
-  background: #f0f9f9;
-  color: #333;
+  border-color: #a3a3a3;
+  background: #fafafa;
+  color: #171717;
 }
 
 .quick-filter-button.active {
-  background: #4BC0C0;
+  background: #6366f1;
   color: white;
-  border-color: #4BC0C0;
+  border-color: #6366f1;
 }
 
 .custom-date-range {
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #e5e5e5;
   padding-top: 20px;
 }
 
 .custom-date-range h4 {
   margin: 0 0 12px 0;
-  color: #333;
-  font-size: 16px;
+  color: #171717;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .date-inputs {
@@ -70,39 +76,44 @@
 }
 
 .date-input-group label {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
-  color: #666;
+  color: #737373;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .date-input-group input {
   padding: 8px 12px;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
   font-size: 14px;
-  transition: border-color 0.2s;
+  transition: border-color 0.15s;
+  background: white;
+  color: #171717;
 }
 
 .date-input-group input:focus {
   outline: none;
-  border-color: #4BC0C0;
+  border-color: #6366f1;
 }
 
 .clear-filter-button {
   padding: 8px 16px;
-  border: 1px solid #ff6384;
-  border-radius: 6px;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
   background: white;
-  color: #ff6384;
-  font-size: 14px;
+  color: #525252;
+  font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.15s;
 }
 
 .clear-filter-button:hover {
-  background: #ff6384;
-  color: white;
+  background: #fafafa;
+  border-color: #a3a3a3;
+  color: #171717;
 }
 
 @media (max-width: 768px) {

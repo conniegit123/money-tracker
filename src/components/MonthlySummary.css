@@ -1,15 +1,17 @@
 .monthly-summary-container {
   background: white;
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5e5;
   margin-bottom: 24px;
 }
 
 .monthly-summary-container h2 {
-  margin: 0 0 20px 0;
-  color: #333;
-  font-size: 24px;
+  margin: 0 0 24px 0;
+  color: #171717;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
 }
 
 .overall-summary {
@@ -21,91 +23,103 @@
 
 .summary-card {
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 4px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5e5;
+  background: white;
 }
 
 .summary-card.income {
-  background: linear-gradient(135deg, #4BC0C0 0%, #3aa8a8 100%);
-  color: white;
+  background: white;
+  border-color: #6366f1;
 }
 
 .summary-card.expense {
-  background: linear-gradient(135deg, #FF6384 0%, #ff4166 100%);
-  color: white;
+  background: white;
+  border-color: #d4d4d4;
 }
 
 .summary-card.balance {
-  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  background: white;
+  border-color: #e5e5e5;
 }
 
 .summary-card.balance.positive {
-  background: linear-gradient(135deg, #4BC0C0 0%, #3aa8a8 100%);
-  color: white;
+  border-color: #6366f1;
 }
 
 .summary-card.balance.negative {
-  background: linear-gradient(135deg, #FF6384 0%, #ff4166 100%);
-  color: white;
+  border-color: #737373;
 }
 
 .summary-label {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 8px;
-  opacity: 0.9;
+  margin-bottom: 12px;
+  color: #737373;
 }
 
 .summary-value {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
+  color: #171717;
+  letter-spacing: -0.5px;
+}
+
+.summary-card.income .summary-value {
+  color: #6366f1;
 }
 
 .monthly-breakdown h3 {
-  margin: 0 0 16px 0;
-  color: #333;
-  font-size: 20px;
+  margin: 0 0 20px 0;
+  color: #171717;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .month-card {
   padding: 16px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
   margin-bottom: 12px;
-  background: #fafafa;
+  background: white;
 }
 
 .month-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .month-header h4 {
   margin: 0;
-  color: #333;
-  font-size: 18px;
+  color: #171717;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .change-indicator {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 500;
   padding: 4px 8px;
   border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .change-indicator.positive {
-  color: #4BC0C0;
-  background: #e0f7f7;
+  color: #6366f1;
+  background: #eef2ff;
 }
 
 .change-indicator.negative {
-  color: #ff6384;
-  background: #ffe0e6;
+  color: #737373;
+  background: #f5f5f5;
 }
 
 .month-stats {
@@ -118,46 +132,50 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
-  background: white;
-  border-radius: 6px;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
 }
 
 .stat-label {
-  font-size: 14px;
-  color: #666;
+  font-size: 13px;
+  color: #737373;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .stat-value {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
+  color: #171717;
 }
 
 .stat-value.income {
-  color: #4BC0C0;
+  color: #6366f1;
 }
 
 .stat-value.expense {
-  color: #ff6384;
+  color: #171717;
 }
 
 .stat-value.positive {
-  color: #4BC0C0;
+  color: #6366f1;
 }
 
 .stat-value.negative {
-  color: #ff6384;
+  color: #171717;
 }
 
 .empty-state {
   text-align: center;
   padding: 40px;
-  color: #999;
+  color: #a3a3a3;
 }
 
 .empty-state p {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {

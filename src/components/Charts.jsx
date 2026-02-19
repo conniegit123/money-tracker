@@ -49,23 +49,26 @@ export default function Charts() {
     return acc;
   }, {});
 
+  // Neutral color palette with accent color variations
+  const neutralColors = [
+    '#6366f1', // Accent color
+    '#a3a3a3', // Gray
+    '#737373', // Darker gray
+    '#d4d4d4', // Light gray
+    '#525252', // Medium gray
+    '#e5e5e5', // Very light gray
+    '#171717', // Dark
+    '#f5f5f5'  // Lightest gray
+  ];
+
   const pieData = {
     labels: Object.keys(expenseByCategory),
     datasets: [
       {
         label: 'Expenses by Category',
         data: Object.values(expenseByCategory),
-        backgroundColor: [
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#4BC0C0',
-          '#9966FF',
-          '#FF9F40',
-          '#FF6384',
-          '#C9CBCF'
-        ],
-        borderWidth: 2,
+        backgroundColor: neutralColors.slice(0, Object.keys(expenseByCategory).length),
+        borderWidth: 1,
         borderColor: '#fff'
       }
     ]
@@ -98,15 +101,15 @@ export default function Charts() {
       {
         label: 'Income',
         data: sortedMonths.map(m => m.income),
-        backgroundColor: '#4BC0C0',
-        borderColor: '#4BC0C0',
+        backgroundColor: '#6366f1',
+        borderColor: '#6366f1',
         borderWidth: 1
       },
       {
         label: 'Expenses',
         data: sortedMonths.map(m => m.expenses),
-        backgroundColor: '#FF6384',
-        borderColor: '#FF6384',
+        backgroundColor: '#737373',
+        borderColor: '#737373',
         borderWidth: 1
       }
     ]
@@ -131,8 +134,8 @@ export default function Charts() {
       {
         label: 'Daily Expenses',
         data: Object.keys(dailySpending).sort().map(date => dailySpending[date]),
-        borderColor: '#FF6384',
-        backgroundColor: 'rgba(255, 99, 132, 0.1)',
+        borderColor: '#6366f1',
+        backgroundColor: 'rgba(99, 102, 241, 0.1)',
         borderWidth: 2,
         fill: true,
         tension: 0.4
@@ -146,12 +149,45 @@ export default function Charts() {
     plugins: {
       legend: {
         position: 'top',
+        labels: {
+          color: '#525252',
+          font: {
+            size: 12,
+            weight: 500
+          },
+          padding: 12,
+          usePointStyle: true
+        }
       },
       tooltip: {
+        backgroundColor: '#171717',
+        titleColor: '#f5f5f5',
+        bodyColor: '#f5f5f5',
+        borderColor: '#e5e5e5',
+        borderWidth: 1,
+        padding: 12,
         callbacks: {
           label: function(context) {
             return `${context.dataset.label || context.label}: $${context.parsed.y?.toFixed(2) || context.parsed.toFixed(2)}`;
           }
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: {
+          color: '#f5f5f5'
+        },
+        ticks: {
+          color: '#737373'
+        }
+      },
+      y: {
+        grid: {
+          color: '#f5f5f5'
+        },
+        ticks: {
+          color: '#737373'
         }
       }
     }
