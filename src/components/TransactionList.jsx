@@ -68,31 +68,40 @@ export default function TransactionList() {
           </button>
         </div>
       </div>
-      
-      <div className="transaction-list">
-        {sortedTransactions.map(transaction => (
-          <div key={transaction.id} className={`transaction-item ${transaction.type}`}>
-            <div className="transaction-main">
-              <div className="transaction-info">
-                <div className="transaction-description">{transaction.description}</div>
-                <div className="transaction-meta">
-                  <span className="transaction-category">{transaction.category}</span>
-                  <span className="transaction-date">{formatDate(transaction.date)}</span>
-                </div>
-              </div>
-              <div className="transaction-amount">
-                <span className={`amount ${transaction.type}`}>
-                  {transaction.type === 'income' ? '+' : '-'}${transaction.amount.toFixed(2)}
-                </span>
-              </div>
+
+      <div className="transaction-table" role="table" aria-label="Transactions">
+        <div className="transaction-row transaction-header" role="row">
+          <div className="cell date" role="columnheader">Date</div>
+          <div className="cell description" role="columnheader">Description</div>
+          <div className="cell category" role="columnheader">Category</div>
+          <div className="cell amount" role="columnheader">Amount</div>
+          <div className="cell action" role="columnheader">Action</div>
+        </div>
+
+        {sortedTransactions.map((transaction) => (
+          <div
+            key={transaction.id}
+            className={`transaction-row transaction-body ${transaction.type}`}
+            role="row"
+          >
+            <div className="cell date" role="cell">{formatDate(transaction.date)}</div>
+            <div className="cell description" role="cell">{transaction.description}</div>
+            <div className="cell category" role="cell">{transaction.category}</div>
+            <div className="cell amount" role="cell">
+              <span className={`amount ${transaction.type}`}>
+                {transaction.type === 'income' ? '+' : '-'}${transaction.amount.toFixed(2)}
+              </span>
             </div>
-            <button
-              className="delete-button"
-              onClick={() => handleDelete(transaction.id)}
-              aria-label="Delete transaction"
-            >
-              ×
-            </button>
+            <div className="cell action" role="cell">
+              <button
+                className="delete-button"
+                onClick={() => handleDelete(transaction.id)}
+                aria-label="Delete transaction"
+                title="Delete"
+              >
+                ×
+              </button>
+            </div>
           </div>
         ))}
       </div>
