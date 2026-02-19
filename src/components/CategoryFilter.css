@@ -1,0 +1,50 @@
+.category-filter-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.category-filter-container h3 {
+  margin: 0 0 16px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category-button {
+  padding: 8px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+  background: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #666;
+}
+
+.category-button:hover {
+  border-color: #4BC0C0;
+  background: #f0f9f9;
+  color: #333;
+}
+
+.category-button.active {
+  background: #4BC0C0;
+  color: white;
+  border-color: #4BC0C0;
+}
+
+.no-categories {
+  color: #999;
+  font-size: 14px;
+  font-style: italic;
+  margin: 0;
+}

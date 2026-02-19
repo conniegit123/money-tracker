@@ -1,0 +1,171 @@
+.monthly-summary-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.monthly-summary-container h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.overall-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.summary-card {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card.income {
+  background: linear-gradient(135deg, #4BC0C0 0%, #3aa8a8 100%);
+  color: white;
+}
+
+.summary-card.expense {
+  background: linear-gradient(135deg, #FF6384 0%, #ff4166 100%);
+  color: white;
+}
+
+.summary-card.balance {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+}
+
+.summary-card.balance.positive {
+  background: linear-gradient(135deg, #4BC0C0 0%, #3aa8a8 100%);
+  color: white;
+}
+
+.summary-card.balance.negative {
+  background: linear-gradient(135deg, #FF6384 0%, #ff4166 100%);
+  color: white;
+}
+
+.summary-label {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.summary-value {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.monthly-breakdown h3 {
+  margin: 0 0 16px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.month-card {
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #fafafa;
+}
+
+.month-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.month-header h4 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.change-indicator {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.change-indicator.positive {
+  color: #4BC0C0;
+  background: #e0f7f7;
+}
+
+.change-indicator.negative {
+  color: #ff6384;
+  background: #ffe0e6;
+}
+
+.month-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.month-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: white;
+  border-radius: 6px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.stat-value.income {
+  color: #4BC0C0;
+}
+
+.stat-value.expense {
+  color: #ff6384;
+}
+
+.stat-value.positive {
+  color: #4BC0C0;
+}
+
+.stat-value.negative {
+  color: #ff6384;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .overall-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .month-stats {
+    grid-template-columns: 1fr;
+  }
+}
