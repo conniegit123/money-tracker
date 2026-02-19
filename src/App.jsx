@@ -17,14 +17,17 @@ function App() {
         </header>
 
         <div className="app-content">
-          <div className="app-main">
-            <TransactionForm />
-            <TransactionList />
+          <div className="date-filter-slot">
+            <DateFilter />
           </div>
 
-          <div className="filters-section">
+          <div className="category-filter-slot">
             <CategoryFilter />
-            <DateFilter />
+          </div>
+
+          <div className="app-main">
+            <TransactionList />
+            <TransactionForm />
           </div>
         </div>
 

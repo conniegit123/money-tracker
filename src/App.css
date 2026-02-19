@@ -47,24 +47,34 @@ body {
 .app-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "date category"
+    "main category";
   gap: 24px;
   margin-bottom: 24px;
+}
+
+.date-filter-slot {
+  grid-area: date;
+}
+
+.category-filter-slot {
+  grid-area: category;
 }
 
 .app-main {
   display: flex;
   flex-direction: column;
-}
-
-.filters-section {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  grid-area: main;
 }
 
 @media (max-width: 1024px) {
   .app-content {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "date"
+      "category"
+      "main";
   }
 }
 
